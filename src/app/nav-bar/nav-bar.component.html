@@ -1,0 +1,40 @@
+<div class="container">
+    <form role="form">
+      <div class="row navbar navbar-light bg-light">
+        <div class="col-lg-10">
+          <label class="checkbox">
+            <input type="checkbox" id="man" [(ngModel)]="service.selectedGroups.men" name="men"/> Men
+          </label>
+          <label class="checkbox">
+            <input type="checkbox" id="woman" checked [(ngModel)]="service.selectedGroups.woman" name="woman"/> Women
+          </label>
+          <label class="checkbox">
+            <input type="checkbox" id="children" [(ngModel)]="service.selectedGroups.children" name="children"/> Children
+          </label>
+        </div>
+        <div class="col-lg-2 right-align">
+          <button class="btn btn-link-info" (click)="seeAllProducts()">SEE ALL PRODUCTS</button>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-s-3 ml-1">
+          <select class="form-control" (change)="comboSort($event.target.value)">
+            <option value="0">Sort: None</option>
+            <option value="1">Sort: 0-9</option>
+            <option value="2">Sort: 9-0</option>
+          </select>
+        </div>
+      </div>
+    </form>
+</div>
+
+
+
+
+
+
+
+
+
+

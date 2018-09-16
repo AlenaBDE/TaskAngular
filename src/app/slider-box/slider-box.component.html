@@ -1,0 +1,23 @@
+<div>
+  <h2>{{ title }}</h2>
+  <hr/>
+  <ngx-slick class="carousel" #slickModal="slick-modal" [config]="slickConfig">
+    <div ngxSlickItem *ngFor="let slide of items" class="slide">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12">
+            <img src="{{ slide.url }}" alt="" width="100%">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-8">
+            <label class="label">{{slide.name}}</label>
+          </div>
+          <div class="col-sm-4">
+            <label class="label-right">{{slide.price}} &#8364;</label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ngx-slick>
+</div>
